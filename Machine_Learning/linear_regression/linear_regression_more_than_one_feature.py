@@ -99,4 +99,6 @@ def main():
     #print(trained_b)
     prediction = predictions_using_trained_model(trained_b=trained_b,trained_w=trained_w,mu=mu,sigma=sigma)
     print("Prediction:",prediction)
-main()
+if __name__ == "__main__":
+    main()
+

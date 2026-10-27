@@ -76,5 +76,5 @@ def main():
     y_hat = predictions_using_trained_model(trained_b=trained_b,trained_w=trained_w,input_x=input_x)
     y_hat = round(y_hat)
     print("Prediction:",y_hat)
-
-main()
+if __name__ == "__main__":
+    main()
