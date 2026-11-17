@@ -57,7 +57,7 @@ for epoch in range(2000):
     g_b3 = np.sum(error, axis=0, keepdims=True) #gradient of the loss function with respect to the biases of the third neuron gradient of b = 1 beacause gradeint of the loss function with respect to the biases is the same as the gradient of the loss function with respect to the output of the neuron
     #z2 = w2 * z1 + b2 
     #relu gradient
-    relu_g = np.dot(error, w3.T) * relu_derivative(z2) 
+    relu_g = np.dot(error, w3.T) * relu_derivative(z2) #layer_error = (error * previous_weight) * relu
     g_w2 = np.dot(z1.T, relu_g) #gradient of the loss function with respect to the weights of the second neuron
     g_b2 = np.sum(relu_g, axis=0, keepdims=True) #gradient of the loss function with respect to bias of the second neuron
 
